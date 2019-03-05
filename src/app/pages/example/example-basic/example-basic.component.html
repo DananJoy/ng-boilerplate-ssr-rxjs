@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row my-4">
+        <div class="col">
+            <div class="text-center">
+                <h1>Counter</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col">
+            <div class="card text-center">
+                <h1>{{ data.counter }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col">
+            <button 
+                (click)="service.minCounter()"
+                type="button" 
+                class="btn btn-danger btn-lg btn-block"
+            >-</button>
+        </div>
+        <div class="col">
+            <button
+                (click)="service.plusCounter()" 
+                type="button" 
+                class="btn btn-success btn-lg btn-block"
+            >+</button>
+        </div>
+    </div>
+</div>
