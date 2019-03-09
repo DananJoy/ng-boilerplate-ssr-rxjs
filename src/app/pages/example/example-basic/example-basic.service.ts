@@ -16,9 +16,7 @@ export class ExampleBasicService {
         console.log('example basic service loaded');
 
         // Main Store
-        this.store = {
-            counter: 0        
-        }
+        this.store = this.setDefaultStore();
 
         this.update = <BehaviorSubject<any>> new BehaviorSubject({});
         this.data = this.update.asObservable();
@@ -29,6 +27,12 @@ export class ExampleBasicService {
     private dispatch(obj: Model) {
         const data = (<any>Object).assign(this.store, obj);
         this.update.next(data);
+    }
+
+    private setDefaultStore() {
+        return {
+            counter: 0
+        }
     }
 
     public plusCounter() {

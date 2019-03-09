@@ -10,12 +10,22 @@ import { ExampleFormService } from './example-form.service';
 
 export class ExampleFormComponent implements OnInit {
 
+    public data: any;
+
     constructor(
         public service: ExampleFormService
     ) {
         console.log('example form component loaded')
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.service.data
+        .subscribe( res => {
+            this.data = res;
+            console.log(res);
+        });
+
+        this.service.buildForm();
+    }
 
 }

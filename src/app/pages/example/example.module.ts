@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { HeaderModule } from 'app/shared/components/header/header.module';
+
 import { ExampleComponent } from './example.component';
 import { ExampleBasicComponent } from './example-basic/example-basic.component';
 import { ExampleFormComponent } from './example-form/example-form.component';
@@ -30,7 +32,8 @@ import { ExampleApiService } from './example-api/example-api.service';
       { path: 'basic', component: ExampleBasicComponent },
       { path: 'api', component: ExampleApiComponent },
       { path: '**', loadChildren: 'app/pages/not-found/not-found.module#NotFoundModule'}
-    ])
+    ]),
+    HeaderModule
   ],
   providers: [
     ExampleService,

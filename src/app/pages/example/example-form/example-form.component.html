@@ -1,1 +1,37 @@
-Example Form Component
+<header></header>
+
+<div class="container fluid">
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="data.exampleForm">
+                <div class="form-group">
+                  <label>Nama</label>
+                  <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+                  <small class="form-text text-danger">{{ data.errors.name }}</small>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="data.exampleForm">
+                <div class="form-group">
+                  <label>Alamat</label>
+                  <input type="text" class="form-control" placeholder="Enter your name" formControlName="address">
+                  <small class="form-text text-danger">{{ data.errors.address }}</small>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form [formGroup]="data.exampleForm">
+                <div class="form-group">
+                  <label>Telefon</label>
+                  <input type="text" class="form-control" placeholder="Enter your name" formControlName="phone">
+                  <small class="form-text text-danger">{{ data.errors.phone }}</small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
